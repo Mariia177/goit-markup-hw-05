@@ -121,8 +121,7 @@ font-family: Roboto, sans-serif;
 .nav-link .curent{
     color: #404BBF;
 }
-.current::after {
-
+    .current::after {
     content: "";
     position: absolute;
     display: block;
