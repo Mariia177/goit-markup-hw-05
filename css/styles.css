@@ -148,6 +148,7 @@ font-family: Roboto, sans-serif;
     padding-bottom: 24px;
     display: block;
     font-size: 16px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
      .nav-link.curent{
         color: #404BBF;
@@ -204,7 +205,10 @@ font-family: Roboto, sans-serif;
 
 
 
+.nav-link.current{
+    color: var(--color-button-active);
 
+}
 
 
 
@@ -306,7 +310,7 @@ font-family: Roboto, sans-serif;
         left: 50%;
         width: 100%;
         height: 100%;
-        transform: translate(-50% -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
         position: absolute;
         padding: 20px 0;
         background: #FCFCFC;
@@ -318,6 +322,14 @@ font-family: Roboto, sans-serif;
          transition: tranform 250ms cubic-bezier(0.4, 0, 0.2, 1);           
                     
     }
+
+
+    .backdrop.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+
 
 .modal-button{
     background: #e7e9fc;
@@ -334,7 +346,10 @@ font-family: Roboto, sans-serif;
 }
 
 
-
+.modal-button:hover {
+    background-color: var(--color-button-active);
+    fill: var(--text-white-color);
+}
 
 
 .modal-icon{
@@ -675,7 +690,7 @@ padding-bottom: 120px;
                height: 100%;
                background-color: rgba(255, 255, 255, 0.1);
                border-radius: 50%;
-               transition: box-shadow var(--transition), background-color var(--transition);
+               transition: background-color var(--transition);
               
              } 
              .socials-link-footer:focus{
@@ -768,7 +783,7 @@ border-radius: 4px;
 padding: 12px 24px;
 border: 1px solid #e7e9fc; 
 cursor: pointer;
-transition: border var(--transition), background-color var(--transition), color var(--transition), box-shadow var(--transition);
+transition: border-color var(--transition), background-color var(--transition), color var(--transition), box-shadow var(--transition);
 
 }
 
